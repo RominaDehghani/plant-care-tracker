@@ -40,7 +40,9 @@ Product name is "Bitki Bakım Takipçisi." No logo beyond a `lucide-react` leaf 
 
 ## Evidence on Hand
 
-No real user testimonials, case studies, or usage data exist or should be fabricated — this is a coursework demo with invented sample plants (e.g., "Salon Ficusu," "Mutfak Nane Saksisi") used only to populate screenshots during development.
+No real user testimonials, case studies, or usage data exist or should be fabricated — this is a coursework demo with invented sample plants.
+
+A **first-run demo bed of five invented plants** ships in the product (Paşa Kılıcı, Sarmaşık, Barış Çiçeği, Mutfak Nane Saksısı, Sukulent), seeded whenever the bed is empty *and* the visitor has never changed anything (tracked by a separate `:touched` flag in `localStorage`, set on the first add/edit/water/delete — an empty plant list alone cannot tell "never used this" from "deliberately cleared the bed"), with dates computed relative to the day it is opened so two plants are always due today, one tomorrow, one in a couple of days, and one freshly planted. The reason is demonstration, not padding: the watering-status derivation is the product's one real mechanism and an empty bed shows none of it. Deleting them is permanent — an emptied bed is never re-seeded — and the empty-state hint still exists for that case.
 
 ## Product Principles
 

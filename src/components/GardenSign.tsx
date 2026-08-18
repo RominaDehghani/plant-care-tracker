@@ -210,7 +210,10 @@ export default function GardenSign({
               {/* Its own opaque panel (chrome, not scene) so it stays
                   legible over the sky in every time-of-day. Positioned out
                   of flow — opening it never shifts the sign or the page. */}
-              <div className="max-h-72 w-[22rem] overflow-x-auto overflow-y-auto rounded-2xl border border-card-border bg-card/95 p-3 text-left shadow-[0_20px_48px_-16px_rgba(79,47,31,0.4)] backdrop-blur-sm sm:w-[30rem]">
+              {/* no-scrollbar: the panel still scrolls, but the platform
+                  scrollbar's grey chrome sat inside a warm cream card and was
+                  the only cold, un-styled element in the whole system. */}
+              <div className="no-scrollbar max-h-72 w-[22rem] overflow-x-auto overflow-y-auto rounded-2xl border border-card-border bg-card/95 p-3 text-left shadow-[0_20px_48px_-16px_rgba(79,47,31,0.4)] backdrop-blur-sm sm:w-[30rem]">
                 <table className="w-full border-collapse text-xs sm:text-sm">
                   <thead>
                     <tr className={subClass}>
@@ -218,10 +221,10 @@ export default function GardenSign({
                         Bitki
                       </th>
                       <th className="pb-1.5 pr-2 text-left font-medium">
-                        Son sulama
+                        Ekilme
                       </th>
                       <th className="pb-1.5 pr-2 text-left font-medium">
-                        Ekilme
+                        Son sulama
                       </th>
                       <th className="pb-1.5 text-left font-medium">
                         Sıradaki sulama
@@ -246,12 +249,12 @@ export default function GardenSign({
                           <td
                             className={`whitespace-nowrap py-1.5 pr-2 align-top ${subClass}`}
                           >
-                            {formatRelativeDate(plant.lastWateredDate)}
+                            {formatRelativeDate(plant.createdAt)}
                           </td>
                           <td
                             className={`whitespace-nowrap py-1.5 pr-2 align-top ${subClass}`}
                           >
-                            {formatRelativeDate(plant.createdAt)}
+                            {formatRelativeDate(plant.lastWateredDate)}
                           </td>
                           <td
                             className={`whitespace-nowrap py-1.5 align-top font-medium ${next.colorClass}`}

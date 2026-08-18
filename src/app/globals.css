@@ -13,6 +13,9 @@
   --foreground-soft: #7a6c58;
   --accent: #2f6b4f;
   --accent-strong: #1f4e39;
+  --grass: #8fc36b;
+  --grass-deep: #5e9b48;
+  --water: #0ea5e9;
   --status-ok: #1f6b4a;
   --status-soon: #a16a1a;
   --status-overdue: #b8452f;
@@ -31,6 +34,9 @@
   --color-foreground-soft: var(--foreground-soft);
   --color-accent: var(--accent);
   --color-accent-strong: var(--accent-strong);
+  --color-grass: var(--grass);
+  --color-grass-deep: var(--grass-deep);
+  --color-water: var(--water);
   --color-status-ok: var(--status-ok);
   --color-status-soon: var(--status-soon);
   --color-status-overdue: var(--status-overdue);
