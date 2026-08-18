@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌿 Bitki Bakım Takipçisi
 
-## Getting Started
+Sahip olduğun bitkileri ekleyip sulama takvimini takip etmeni sağlayan bir Next.js uygulaması. Her bitki kartı, son sulama tarihine ve sulama aralığına göre otomatik olarak **"Bugün sula"**, **"Yakında"** veya **"İyi durumda"** durumunu gösterir. Veriler tarayıcının `localStorage`'ında saklanır.
 
-First, run the development server:
+![Bitki Bakım Takipçisi ekran görüntüsü](public/screenshot.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Özellikler
+
+- **Ekle** — Yeni bitki ekleme formu (`/plants/new`)
+- **Listele** — Ana sayfada kart grid, sulama durumuna göre renkli rozetler
+- **Güncelle** — Bitki bilgilerini düzenleme (`/plants/[id]/edit`) veya tek tıkla "Sulandı" ile hızlı güncelleme
+- **Sil** — Onay ile bitki silme
+
+## Kullanılan Teknolojiler
+
+- [Next.js](https://nextjs.org) (App Router, TypeScript)
+- [Tailwind CSS](https://tailwindcss.com)
+- [lucide-react](https://lucide.dev) — ikonlar
+- `localStorage` — veri kalıcılığı (backend yok)
+
+## Proje Yapısı
+
+```
+src/
+  app/            # Sayfalar (ana liste, ekle, düzenle)
+  components/     # PlantCard, PlantForm, PlantList, Header
+  interfaces/     # Plant tipi (TypeScript)
+  lib/            # localStorage tabanlı usePlants hook'u ve durum hesaplama
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Kurulum
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Ardından [http://localhost:3000](http://localhost:3000) adresini aç.
 
-## Learn More
+## Yayınlama
 
-To learn more about Next.js, take a look at the following resources:
+- **GitHub:** <REPO_URL>
+- **Canlı demo (Vercel):** <VERCEL_URL>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Vercel'e almak için: [vercel.com/new](https://vercel.com/new) üzerinden bu GitHub reposunu import et — `next build` ayarları otomatik algılanır, ekstra yapılandırma gerekmez.

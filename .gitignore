@@ -36,6 +36,9 @@ yarn-error.log*
 # vercel
 .vercel
 
+# impeccable design-skill working state
+/.impeccable/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
