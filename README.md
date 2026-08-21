@@ -4,6 +4,8 @@ Sahip olduğun bitkileri ekleyip sulama takvimini takip etmeni sağlayan bir Nex
 
 Uygulama bir kart listesi değil, **bir bahçe kesiti**: gökyüzünün altında bir çim şeridi, altında toprak, ve bitkiler ektiğin sırayla o toprakta duruyor — en eski bitki en uzun, en yeni bitki en küçük. Her bitkinin sulama durumu (son sulama tarihi + sulama aralığı) yaprak renginden ve rozetinden anlaşılıyor. Veriler tarayıcının `localStorage`'ında saklanıyor, backend yok.
 
+![Bitki Bakım Takipçisi — bahçe sahnesi](public/screenshot.png)
+
 ## Özellikler
 
 - **Ekle** — Boş toprağa dokunup tohum ekiyorsun; form dokunduğun noktadan büyüyerek açılıyor
