@@ -39,6 +39,11 @@ yarn-error.log*
 # impeccable design-skill working state
 /.impeccable/
 
+# calisma notlari: README disindaki markdown dosyalari repoya girmez
+# (AGENTS.md `next dev` tarafindan otomatik olusturulur)
+*.md
+!README.md
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
