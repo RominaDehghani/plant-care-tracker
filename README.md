@@ -74,6 +74,6 @@ npm run lint    # ESLint
 ## Yayınlama
 
 - **GitHub:** <https://github.com/RominaDehghani/plant-care-tracker>
-- **Canlı demo (Vercel):** <VERCEL_URL>
+- **Canlı demo (Vercel):** <https://plant-care-tracker-mu.vercel.app/>
 
 Vercel'e almak için: [vercel.com/new](https://vercel.com/new) üzerinden bu GitHub reposunu import et — `next build` ayarları otomatik algılanır, ekstra yapılandırma gerekmez.
